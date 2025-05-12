@@ -1,0 +1,9 @@
+{
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\jjnv\\Documents\\Mega\\POLI\\Doutorado\\2025.1\\Análise de Algoritmo\\Seminario\\Shellsort\\shellsort\\lib\\algs4.jar"
+    ],
+    "java.debug.settings.onBuildFailureProceed": true
+}
