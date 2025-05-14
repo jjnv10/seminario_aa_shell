@@ -21,28 +21,32 @@ public class App {
 
     public static void main(String[] args) throws Exception {
 
-        int[] elementos = { 1000, 4000, 8000, 1000000, 99999999, 999999999, 1000000000 };
-
+        int[] elementos = { 1000, 4000, 8000, 1000000 };
+ShellSort shellSort;
         Gerir[] g = new Gerir[elementos.length];
 
         for (int i = 0; i < elementos.length; i++) {
+            shellSort = new ShellSort();
             // Gerir g = new Gerir(0, 0.0);
             Integer[] lista = listar(elementos[i]);
             // tempo inicial
             long startTime = System.currentTimeMillis();
             // Executa o algoritmo de ordenação
-            ShellSort.sort(lista);
+            shellSort.sort(lista);
             // tempo final
             long endTime = System.currentTimeMillis();
             // tempo total
             double tempo = (endTime - startTime) / 1_000_000_000.0;
-            
-            g[i] = new Gerir(elementos[i], tempo);
+
+            g[i] = new Gerir(elementos[i], tempo, shellSort.getComparisons(), shellSort.getSwaps());
+       
         }
         // Exibe os resultados
-        System.out.println("Quantidade\tTempo (s)");
+        System.out.println("Quantidade\tTempo (s)\t\tComparações\tTrocas");
+        System.out.println("---------------------------*-*-*-*--------------------------");
         for (Gerir ger : g) {
-            System.out.printf("%d\t\t%.9f\n", ger.getQuantidade(), ger.getTempo());
+            System.out.printf("%d\t\t%.9f\t\t%d\t\t%d\n", ger.getQuantidade(), ger.getTempo(), ger.getComparacoes(),
+                    ger.getTrocas());
         }
 
     }
