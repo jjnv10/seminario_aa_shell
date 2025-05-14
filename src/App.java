@@ -21,7 +21,7 @@ public class App {
 
     public static void main(String[] args) throws Exception {
 
-        int[] elementos = { 1000, 4000, 8000, 1000000 , 9000000};
+        int[] elementos = { 1000, 4000, 8000, 1000000, 99999999, 999999999, 1000000000 };
 
         Gerir[] g = new Gerir[elementos.length];
 
