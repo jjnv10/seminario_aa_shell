@@ -3,6 +3,18 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * App
+ * @author Joaquim João Nsaku Ventura, Maria Renay e Paulino Domingos
+ * @description Classe principal para executar o algoritmo de ordenação ShellSort
+ * @date 2023-10-01
+ * @version 1.0
+ * @description Esta classe contém o método main que executa o algoritmo de ordenação ShellSort
+ * e mede o tempo de execução para diferentes tamanhos de entrada.
+ * @description O método listar gera uma lista de números inteiros aleatórios para serem ordenados.
+ * @version 1.0
+ */
+
 public class App {
     // Classe para armazenar a quantidade de elementos e o tempo de execução
     public static Integer[] listar(int n) {
